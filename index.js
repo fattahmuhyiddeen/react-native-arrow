@@ -19,7 +19,7 @@ const Arrow = ({ size, color }) => {
       borderTopColor: "transparent",
       borderStyle: "solid",
       position: "absolute",
-      top: size * 0.66
+      top: size * 0.65
     },
     arrowHead2: {
       backgroundColor: color,

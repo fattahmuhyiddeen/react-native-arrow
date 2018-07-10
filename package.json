@@ -1,6 +1,6 @@
 {
   "name": "react-native-arrow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "wanna scalable arrow but not woth of importing the whole react native vector icons? try this",
   "main": "index.js",
   "scripts": {
