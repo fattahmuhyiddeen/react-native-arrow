@@ -1,7 +1,7 @@
 {
   "name": "react-native-arrow",
-  "version": "1.0.2",
-  "description": "wanna scalable arrow but not woth of importing the whole react native vector icons? try this",
+  "version": "1.0.3",
+  "description": "Wanna scalable arrow but not woth of importing the whole react native vector icons? try this. 100% React Native only code to draw arrow",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
