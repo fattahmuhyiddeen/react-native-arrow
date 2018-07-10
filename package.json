@@ -1,0 +1,24 @@
+{
+  "name": "react-native-arrow",
+  "version": "1.0.0",
+  "description": "wanna scalable arrow but not woth of importing the whole react native vector icons? try this",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fattahmuhyiddeen/react-native-arrow.git"
+  },
+  "keywords": [
+    "arrow",
+    "react-native",
+    "shape"
+  ],
+  "author": "fattahmuhyiddeen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fattahmuhyiddeen/react-native-arrow/issues"
+  },
+  "homepage": "https://github.com/fattahmuhyiddeen/react-native-arrow#readme"
+}
