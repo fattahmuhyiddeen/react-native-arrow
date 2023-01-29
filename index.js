@@ -1,64 +1,43 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import PropTypes from "prop-types";
 
-const Arrow = ({ size, color }) => {
+const Arrow = ({ size = 10, color = "black", direction = "right" }) => {
   const arrowWidth = size / 3.5;
-  const styles = StyleSheet.create({
-    container: {
-      backgroundColor: "transparent",
-      overflow: "visible",
-      width: size * 1.9,
-      height: size * 1.6
-    },
-    arrowTail: {
-      backgroundColor: color,
-      width: size * 1.3,
-      height: arrowWidth,
-      left: size * 0.4,
-      borderTopColor: "transparent",
-      borderStyle: "solid",
-      position: "absolute",
-      top: size * 0.65
-    },
-    arrowHead2: {
-      backgroundColor: color,
-      width: size,
-      height: arrowWidth,
-      borderTopColor: "transparent",
-      borderStyle: "solid",
-      transform: [{ rotate: "45deg" }],
-      position: "absolute",
-      top: size * 0.9
-    },
-    arrowHead1: {
-      backgroundColor: color,
-      width: size,
-      height: arrowWidth,
-      borderTopColor: "transparent",
-      borderStyle: "solid",
-      transform: [{ rotate: "135deg" }],
-      position: "absolute",
-      top: size * 0.4
-    }
-  });
-
+  const transform = direction == "right" ? [{ rotate: "180deg" }] : undefined;
   return (
-    <View style={styles.container}>
-      <View style={styles.arrowHead1} />
-      <View style={styles.arrowHead2} />
-      <View style={styles.arrowTail} />
+    <View style={{ ...styles.container, width: size * 1.9, height: size * 1.6, transform  }}>
+      <View style={{
+        ...styles.arrowHead1,
+        backgroundColor: color, width: size, height: arrowWidth, top: size * 0.4
+      }} />
+      <View style={{ ...styles.arrowHead2, backgroundColor: color, width: size, height: arrowWidth, top: size * 0.9 }} />
+      <View style={{ ...styles.arrowTail, height: arrowWidth, backgroundColor: color, top: size * 0.65, width: size * 1.3, left: size * 0.4 }} />
     </View>
   );
 };
 
-Arrow.propTypes = {
-  size: PropTypes.number,
-  color: PropTypes.string
-};
-
-Arrow.defaultProps = {
-  size: 15,
-  color: "white"
-};
 export default Arrow;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "transparent",
+    overflow: "visible",
+  },
+  arrowTail: {
+    borderTopColor: "transparent",
+    borderStyle: "solid",
+    position: "absolute",
+  },
+  arrowHead2: {
+    borderTopColor: "transparent",
+    borderStyle: "solid",
+    transform: [{ rotate: "45deg" }],
+    position: "absolute"
+  },
+  arrowHead1: {
+    borderTopColor: "transparent",
+    borderStyle: "solid",
+    transform: [{ rotate: "135deg" }],
+    position: "absolute",
+  }
+});
